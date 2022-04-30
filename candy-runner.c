@@ -34,3 +34,4 @@ uint32_t printf_hook(const uint32_t str_ptr, const uint32_t val_ptr)
 }
 
 u32 (*Z_envZ_printf)(u32, u32) = printf_hook;
+void (*Z_envZ_abort)(void) = abort;

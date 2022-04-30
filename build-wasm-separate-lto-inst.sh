@@ -14,7 +14,7 @@ WASM_ARGS=" -Wno-unused-macros -Wno-pedantic -Wno-redundant-parens -Wno-undef -W
 
 /usr/bin/clang -flto -g -Weverything -Werror $WASM_ARGS -Ofast -mtune=native -march=native -c -o bank.o bank.c
 
-/usr/bin/clang -flto -g -Weverything -Werror $WASM_ARGS -Wno-format-nonliteral -Ofast -mtune=native -march=native -c -o candy-runner.o candy-runner.c
+/usr/bin/clang -flto -g -Weverything -Werror $WASM_ARGS -Wno-format-nonliteral -Ofast -mtune=native -march=native -c -o candy-runner.o candy-runner-inst.c
 
 /usr/bin/clang -flto -g -Wall -Werror $WASM_ARGS -Ofast -mtune=native -march=native -c -o wasm-rt-impl.o ../wabt/wasm2c/wasm-rt-impl.c
 
