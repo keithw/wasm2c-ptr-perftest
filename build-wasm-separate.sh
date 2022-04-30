@@ -8,7 +8,7 @@ wasm2c main.wasm -o main.c
 
 wasm2c bank.wasm -o bank.c
 
-WASM_ARGS=" -Wno-unused-macros -Wno-redundant-parens -Wno-undef -Wno-padded -Wno-missing-noreturn -Wno-unused-variable -Wno-unused-function"
+WASM_ARGS=" -Wno-unused-macros -Wno-redundant-parens -Wno-undef -Wno-padded -Wno-missing-noreturn -Wno-unused-variable -Wno-unused-function -I../wabt/wasm2c"
 
 /usr/bin/clang -g -Weverything -Werror $WASM_ARGS -Ofast -mtune=native -march=native -c -o main.o main.c
 
