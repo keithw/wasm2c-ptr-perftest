@@ -20,8 +20,8 @@ int main(void) {
   Z_main_module_instance_t main;
   Z_bank_module_instance_t bank;
   Z_env_module_instance_t env;
-  
-  Z_main_instantiate(&main, &bank, &env);
+
+  Z_main_instantiate(&main, &bank, &env, Z_bankZ_buy_candy, Z_bankZ_can_buy_candy);
   Z_bank_instantiate(&bank, &main);
   env.main_memory = Z_mainZ_memory(&main);
   
