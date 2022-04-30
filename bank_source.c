@@ -10,7 +10,7 @@ bool can_buy_candy(void) __attribute((export_name("can_buy_candy")));
 void buy_candy(void) __attribute((export_name("buy_candy")));
 uint64_t candy_pieces(void)  __attribute((export_name("candy_pieces")));
 
-void main_abort(void) __attribute((import_module("main")));
+void wasm_abort(void) __attribute((import_module("main")));
 
 void deposit_money(uint64_t amount)
 {
@@ -25,7 +25,7 @@ bool can_buy_candy(void)
 void buy_candy(void)
 {
   if (!can_buy_candy()) {
-    main_abort();
+    wasm_abort();
   }
 
   s_bank_balance -= s_cost_of_candy;

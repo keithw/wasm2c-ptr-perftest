@@ -9,9 +9,9 @@ bool can_buy_candy(void) __attribute((import_module("bank")));
 void buy_candy(void) __attribute((import_module("bank")));
 uint64_t candy_pieces(void) __attribute((import_module("bank")));
 
-void main_abort(void) __attribute((export_name("main_abort")));
+void wasm_abort(void) __attribute((export_name("wasm_abort")));
 
-int main(void)
+int main(void) __attribute((export_name("main")))
 {
   deposit_money(1000000000);
   while (can_buy_candy()) {
@@ -21,7 +21,7 @@ int main(void)
   return 0;
 }
 
- __attribute((noreturn)) void main_abort(void)
+ __attribute((noreturn)) void wasm_abort(void)
 {
   abort();
 }
