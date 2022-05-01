@@ -317,7 +317,7 @@ static u32 w2c___original_main(Z_main_module_instance_t* module_instance) {
   w2c_i0 -= w2c_i1;
   w2c_l0 = w2c_i0;
   module_instance->w2c___stack_pointer = w2c_i0;
-  w2c_j0 = 1000000000ull;
+  w2c_j0 = 10000000000ull;
   Z_bankZ_deposit_money(module_instance->Z_bank_module_instance, w2c_j0);
   w2c_i0 = module_instance->Z_bankZ_can_buy_candy(module_instance->Z_bank_module_instance);
   w2c_i0 = !(w2c_i0);
