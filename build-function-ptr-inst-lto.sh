@@ -1,6 +1,6 @@
 #!/bin/bash -ex
 
-WASM_ARGS=" -Wno-unused-macros -Wno-pedantic -Wno-redundant-parens -Wno-undef -Wno-padded -Wno-missing-noreturn -Wno-unused-variable -Wno-unused-function -I../wabt/wasm2c"
+WASM_ARGS="-Wno-unused-parameter -Wno-sign-conversion -Wno-declaration-after-statement -Wno-unused-macros -Wno-pedantic -Wno-redundant-parens -Wno-undef -Wno-padded -Wno-missing-noreturn -Wno-unused-variable -Wno-unused-function -I../wabt/wasm2c"
 
 /usr/bin/clang -flto -g -Weverything -Werror $WASM_ARGS -Ofast -mtune=native -march=native -c -o main.o main.c
 
