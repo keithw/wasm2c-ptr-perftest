@@ -13,7 +13,7 @@ void wasm_abort(void) __attribute((export_name("wasm_abort")));
 
 int main(void) __attribute((export_name("main")))
 {
-  deposit_money(1000000000);
+  deposit_money(10000000000);
   while (can_buy_candy()) {
     buy_candy();
   }
